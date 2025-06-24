@@ -55,22 +55,22 @@ export const ProjectsSection = () => {
       className="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 relative bg-background"
     >
       <div className="w-full max-w-[1200px] mx-auto">
-        <div className="w-full text-center mb-10">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-8">
+        <div className="text-center mb-10">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
             Featured <span className="text-primary">Projects</span>
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
             Here are some of my recent projects. Each one was built with care, precision, and a focus on performance and user experience.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group bg-card rounded-2xl overflow-hidden shadow-xl hover:shadow-[0_6px_30px_rgba(0,0,0,0.1)] transition-all duration-400 h-full flex flex-col transform hover:scale-[1.02]"
+              className="group bg-card rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col hover:scale-[1.01]"
             >
-              <div className="h-[280px] w-full overflow-hidden">
+              <div className="h-[220px] w-full overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -78,34 +78,34 @@ export const ProjectsSection = () => {
                 />
               </div>
 
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex flex-wrap gap-3 mb-6">
+              <div className="p-5 flex-1 flex flex-col">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={tag + idx}
-                      className="px-3 py-2 text-base font-medium border rounded-full bg-secondary text-secondary-foreground"
+                      className="px-3 py-1.5 text-sm font-medium border rounded-full bg-secondary text-secondary-foreground"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl md:text-2xl font-bold mb-4">
+                <h3 className="text-lg md:text-xl font-bold mb-3">
                   {project.title}
                 </h3>
 
-                <p className="text-muted-foreground text-base mb-6 flex-1">
+                <p className="text-muted-foreground text-sm mb-4 flex-1">
                   {project.description}
                 </p>
 
-                <div className="flex justify-between items-center mt-auto">
+                <div className="flex justify-end items-center mt-auto">
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-foreground/80 hover:text-primary transition-colors duration-300"
                   >
-                    <Github size={28} />
+                    <Github size={24} />
                   </a>
                 </div>
               </div>
@@ -113,14 +113,14 @@ export const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-3 px-8 py-4 text-lg font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-300"
+            className="cosmic-button w-fit flex items-center mx-auto gap-2 px-6 py-3 text-base font-semibold rounded-md hover:bg-primary/90 transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/Bhanu2001829"
           >
-            Check My GitHub <ArrowRight size={20} />
+            Check My GitHub <ArrowRight size={18} />
           </a>
         </div>
       </div>
