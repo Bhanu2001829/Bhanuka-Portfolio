@@ -90,20 +90,20 @@ export const AboutSection = () => {
                     <div>
                       <div className="text-primary font-semibold">2023 - 2027</div>
                       <div className="font-semibold">BSc (Hons) in Software Engineering</div>
-                      <div className="italic text-primary">NIBM</div>
+                      <div className="italic text-primary">National Institute of Business Management (NIBM)</div>
                       <div>Specialized in Software Engineering</div>
                     </div>
                     <div>
                       <div className="text-primary font-semibold">2024 - 2025</div>
                       <div className="font-semibold">Higher National Diploma</div>
-                      <div className="italic text-primary">NIBM</div>
-                      <div>Robotics, data structures, mobile dev, IoT, emerging tech</div>
+                      <div className="italic text-primary">National Institute of Business Management (NIBM)</div>
+                      <div>Developed strong foundations through focused study in areas such as Robotics, advanced data structures, enterprise-grade applications, mobile development, IoT systems, and cutting-edge technologies.</div>
                     </div>
                     <div>
                       <div className="text-primary font-semibold">2023 - 2024</div>
                       <div className="font-semibold">Diploma in Software Engineering</div>
-                      <div className="italic text-primary">NIBM</div>
-                      <div>GUI design, OOP, databases, dynamic web apps</div>
+                      <div className="italic text-primary">National Institute of Business Management (NIBM)</div>
+                      <div>Acquired practical skills in designing graphical user interfaces(GUI), implementing object-oriented solutions, applying Agile methodologies, managing databases, and developing dynamic web applications.</div>
                     </div>
                     <div>
                       <div className="text-primary font-semibold">2018 - 2020</div>
