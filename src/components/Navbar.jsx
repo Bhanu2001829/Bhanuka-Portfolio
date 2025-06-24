@@ -27,52 +27,52 @@ export const Navbar = () => {
     <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-4 bg-background/90 backdrop-blur-md shadow-sm" : "py-6"
+        isScrolled ? "py-3 bg-background/90 backdrop-blur-md shadow-sm" : "py-5"
       )}
     >
-    <div className="w-full flex items-center justify-between px-4 md:px-28">
+      <div className="w-full flex items-center justify-between px-4 md:px-30">
+        {/* Logo */}
         <a
-          className="text-2xl sm:text-4xl font-bold text-primary flex items-center leading-tight"
+          className="text-lg sm:text-xl font-bold text-primary leading-tight"
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground"> Bhanuka&#39;s </span> Portfolio
+            <span className="text-glow text-foreground">Bhanuka&#39;s</span> Portfolio
           </span>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-12">
+        <div className="hidden md:flex space-x-6">
           {navItems.map((item, key) => (
             <a
               key={key}
               href={item.href}
-              className="text-3xl text-foreground/80 hover:text-primary transition-colors duration-300 font-medium"
+              className="text-base text-foreground/80 hover:text-primary transition-colors duration-300 font-medium"
             >
               {item.name}
             </a>
           ))}
         </div>
 
-        {/* Mobile Toggle Button */}
+        {/* Mobile Toggle */}
         <button
           onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-3 rounded-md text-foreground z-50 hover:bg-primary/20 transition-colors"
+          className="md:hidden p-2 rounded-md text-foreground z-50 hover:bg-primary/20 transition-colors"
           aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
         >
-          {isMenuOpen ? <X size={36} /> : <Menu size={36} />}
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
 
         {/* Mobile Nav Overlay */}
         <div
           className={cn(
-            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
-            "transition-opacity duration-300 md:hidden",
+            "fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-opacity duration-300 md:hidden",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
           )}
         >
-          <div className="flex flex-col space-y-10 text-4xl font-semibold">
+          <div className="flex flex-col space-y-8 text-xl font-medium">
             {navItems.map((item, key) => (
               <a
                 key={key}

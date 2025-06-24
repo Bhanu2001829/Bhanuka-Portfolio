@@ -52,48 +52,49 @@ export const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="py-36 px-6 md:px-16 w-full min-h-screen bg-background"
+      className="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 relative bg-background"
     >
-      <div className="max-w-[1600px] mx-auto w-full">
-         <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-12 md:mb-16 text-center">
-          Featured <span className="text-primary">Projects</span>
-        </h2>
+      <div className="w-full max-w-[1200px] mx-auto">
+        <div className="w-full text-center mb-10">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-8">
+            Featured <span className="text-primary">Projects</span>
+          </h2>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Here are some of my recent projects. Each one was built with care, precision, and a focus on performance and user experience.
+          </p>
+        </div>
 
-        <p className="text-center text-3xl md:text-4xl text-muted-foreground mb-28 max-w-5xl mx-auto leading-relaxed">
-          Here are some of my recent projects. Each one was built with care, precision, and a focus on performance and user experience.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group bg-card rounded-3xl overflow-hidden shadow-2xl hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] transition-all duration-500 h-full flex flex-col transform hover:scale-[1.03]"
+              className="group bg-card rounded-2xl overflow-hidden shadow-xl hover:shadow-[0_6px_30px_rgba(0,0,0,0.1)] transition-all duration-400 h-full flex flex-col transform hover:scale-[1.02]"
             >
-              <div className="h-[360px] w-full overflow-hidden">
+              <div className="h-[280px] w-full overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
-              <div className="p-10 flex-1 flex flex-col">
-                <div className="flex flex-wrap gap-4 mb-8">
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="flex flex-wrap gap-3 mb-6">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={tag + idx}
-                      className="px-5 py-3 text-lg font-medium border rounded-full bg-secondary text-secondary-foreground"
+                      className="px-3 py-2 text-base font-medium border rounded-full bg-secondary text-secondary-foreground"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                <h3 className="text-xl md:text-2xl font-bold mb-4">
                   {project.title}
                 </h3>
 
-                <p className="text-muted-foreground text-2xl mb-8 flex-1">
+                <p className="text-muted-foreground text-base mb-6 flex-1">
                   {project.description}
                 </p>
 
@@ -104,7 +105,7 @@ export const ProjectsSection = () => {
                     rel="noopener noreferrer"
                     className="text-foreground/80 hover:text-primary transition-colors duration-300"
                   >
-                    <Github size={36} />
+                    <Github size={28} />
                   </a>
                 </div>
               </div>
@@ -112,14 +113,14 @@ export const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-28">
+        <div className="text-center mt-16">
           <a
-            className="cosmic-button w-fit flex items-center mx-auto gap-4 px-12 py-6 text-2xl font-semibold rounded-xl hover:bg-primary/90 transition-colors duration-300"
+            className="cosmic-button w-fit flex items-center mx-auto gap-3 px-8 py-4 text-lg font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/Bhanu2001829"
           >
-            Check My GitHub <ArrowRight size={28} />
+            Check My GitHub <ArrowRight size={20} />
           </a>
         </div>
       </div>

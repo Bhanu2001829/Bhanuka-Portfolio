@@ -23,7 +23,7 @@ const skills = [
   { name: "MongoDB", level: 70, category: "database" },
   { name: "Oracle", level: 65, category: "database" },
   { name: "Microsoft SQL Server", level: 60, category: "database" },
-  { name: "SQL Lite", level: 60, category: "database"},
+  { name: "SQL Lite", level: 60, category: "database" },
 
   // Tools
   { name: "Git/GitHub", level: 90, category: "tools" },
@@ -53,49 +53,52 @@ export const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="min-h-screen w-full flex items-center py-12 md:py-24 px-4 sm:px-6 lg:px-8 relative bg-secondary/30">
-      {/* Background elements */}
+    <section
+      id="skills"
+      className="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 relative bg-secondary/30"
+    >
+      {/* Background blurred circles like AboutSection */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full bg-primary/10 blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/3 w-64 h-64 rounded-full bg-primary/5 blur-3xl"></div>
       </div>
 
-      <div className="w-full max-w-[1800px] mx-auto">
-        <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-12 md:mb-16 text-center">
+      <div className="w-full max-w-[1200px] mx-auto">
+        <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-center">
           My <span className="text-primary">Skills</span>
         </h2>
 
-        {/* Enhanced Category Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16 md:mb-20">
+        {/* Category Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-8 py-4 md:px-10 md:py-5 rounded-full transition-all duration-300 capitalize",
-                "text-xl md:text-2xl font-medium",
+                "px-6 py-2.5 rounded-full transition-all duration-300 capitalize text-lg font-medium",
                 "transform hover:scale-105 active:scale-95",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground shadow-lg hover:shadow-xl"
                   : "bg-secondary/70 text-foreground hover:bg-secondary hover:shadow-md"
               )}
             >
-              {category === "all" ? "All Skills" : 
-               category === "softskills" ? "Soft Skills" : 
-               category.charAt(0).toUpperCase() + category.slice(1)}
+              {category === "all"
+                ? "All Skills"
+                : category === "softskills"
+                ? "Soft Skills"
+                : category.charAt(0).toUpperCase() + category.slice(1)}
             </button>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-10">
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredSkills.map((skill) => (
             <div
               key={`${skill.name}-${skill.category}`}
-              className="gradient-border p-6 md:p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+              className="gradient-border p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
             >
-              <div className="text-left mb-6">
-                <h3 className="font-semibold text-2xl md:text-3xl">{skill.name}</h3>
-              </div>
+              <h3 className="font-semibold text-xl mb-4">{skill.name}</h3>
               <div className="w-full bg-secondary/50 h-3 rounded-full overflow-hidden">
                 <div
                   className="bg-primary h-3 rounded-full origin-left animate-[grow_1.5s_ease-out]"
@@ -103,7 +106,7 @@ export const SkillsSection = () => {
                 />
               </div>
               <div className="text-right mt-2">
-                <span className="text-lg md:text-xl text-muted-foreground font-medium">
+                <span className="text-base text-muted-foreground font-medium">
                   {skill.level}%
                 </span>
               </div>
