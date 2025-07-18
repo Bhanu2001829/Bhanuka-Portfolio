@@ -40,7 +40,8 @@ export const AboutSection = () => {
                 Get In Touch
               </a>
               <a
-                href="https://drive.google.com/file/d/16qPayUUd8CNgya8HCbLfc380G8FD9gCB/view?usp=sharing"
+                href="https://drive.google.com/file/d/1wf-lofwD5xW9fASDydH2tOa76-K6QyZc/view?usp=sharing pull origin main
+"
                 className="px-6 py-2.5 rounded-full border-2 border-primary text-primary hover:bg-primary/10 transition-all text-base sm:text-lg text-center hover:scale-105"
               >
                 Download CV
