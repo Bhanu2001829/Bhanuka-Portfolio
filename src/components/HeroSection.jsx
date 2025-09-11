@@ -90,7 +90,7 @@ export const HeroSection = () => {
         <div className="w-full lg:w-1/2 flex justify-center opacity-0 animate-fade-in-delay-3">
           <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] rounded-full overflow-hidden border-[4px] border-primary/20 shadow-xl group transition-all duration-500">
             <img
-              src="/images/bhanuka.JPG"
+              src="/images/bhanuka1.JPG"
               alt="Bhanuka Rajasinghe"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               loading="eager"
