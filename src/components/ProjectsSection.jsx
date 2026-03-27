@@ -44,7 +44,17 @@ const projects = [
       "A full-featured IoT-based smart safety suit designed for construction workers — equipped with real-time health monitoring, environmental sensing, emergency alerts, and seamless integration with cloud platforms for live data tracking and analysis.",
     image: "/projects/project5.png",
     tags: ["C++", "NodeMCU", "Firebase"],
-    githubUrl: "https://github.com/Shehan303/Hazardous-Environment-Suit-HEV-Suit-.git",
+    githubUrl:
+      "https://github.com/Shehan303/Hazardous-Environment-Suit-HEV-Suit-.git",
+  },
+  {
+    id: 6,
+    title: "ShootFlow Pro - Professional Photographer Workflow Manager Tool",
+    description:
+      "ShootFlow Pro is a full-stack web application tool designed to manage the complete workflow of professional photographers. It allows photographers to track shoot bookings, manage client details, organize equipment checklists with costs, monitor budgets, and prioritize urgent tasks all in one purpose-built tool.",
+    image: "/projects/project6.png",
+    tags: ["Javascript", "java", "HTML"],
+    githubUrl: "https://github.com/Bhanu2001829/Smart_todo.git",
   },
 ];
 
@@ -60,7 +70,8 @@ export const ProjectsSection = () => {
             Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
-            Here are some of my recent projects. Each one was built with care, precision, and a focus on performance and user experience.
+            Here are some of my recent projects. Each one was built with care,
+            precision, and a focus on performance and user experience.
           </p>
         </div>
 
